@@ -1,5 +1,5 @@
-from fastavro import block_reader
+from fastavro import reader
 with open('test2.avro', 'rb') as fo:
-    avro_reader = block_reader(fo)
-    for block in avro_reader:
-        process_block(block)
+    avro_reader = reader(fo)
+    for record in avro_reader:
+        process_record(record)
