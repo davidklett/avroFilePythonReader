@@ -1,3 +1,4 @@
+import fastavro
 from fastavro import reader
 with open('test2.avro', 'rb') as fo:
     avro_reader = reader(fo)
