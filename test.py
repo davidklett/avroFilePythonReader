@@ -11,5 +11,5 @@ writer.close()
 
 reader = DataFileReader(open("test2.avro", "rb"), DatumReader())
 for user in reader:
-    print user
+    print(user)
 reader.close()
