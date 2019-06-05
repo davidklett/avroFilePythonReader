@@ -11,7 +11,7 @@ schema = avro.schema.parse(open("test.avsc", "rb").read())
 #writer.append({"name": "Ben", "favorite_number": 7, "favorite_color": "red"})
 #writer.close()
 
-reader = DataFileReader(open("users.avro", "rb"), DatumReader())
-for user in reader:
-    print user
+reader = DataFileReader(open("test.avro", "rb"), DatumReader())
+for test in reader:
+    print test
 reader.close()
