@@ -4,7 +4,7 @@ import avro.schema
 from avro.datafile import DataFileReader, DataFileWriter
 from avro.io import DatumReader, DatumWriter
 
-schema = avro.schema.parse(open("test.avsc", "rb").read())
+schema = avro.schema.parse(open("user.avsc", "rb").read())
 
 #writer = DataFileWriter(open("test.avro", "wb"), DatumWriter(), schema)
 #writer.append({"name": "Alyssa", "favorite_number": 256})
@@ -12,6 +12,6 @@ schema = avro.schema.parse(open("test.avsc", "rb").read())
 #writer.close()
 
 reader = DataFileReader(open("test.avro", "rb"), DatumReader())
-for test in reader:
-    print test
+for user in reader:
+    print user
 reader.close()
